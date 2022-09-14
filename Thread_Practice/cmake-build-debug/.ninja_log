@@ -1,0 +1,26 @@
+# ninja log v5
+4	440	6749957029434343	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+441	653	6749957031528737	Thread_Practice.exe	2c0a0ffd613a383b
+0	326	6749958343796002	build.ninja	236ca138adbe60c9
+3	1581	6749959105903497	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1584	1754	6749959107596762	Thread_Practice.exe	2c0a0ffd613a383b
+4	1381	6749959782772159	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1382	1558	6749959784517487	Thread_Practice.exe	2c0a0ffd613a383b
+4	1336	6749959916851638	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1337	1526	6749959918726176	Thread_Practice.exe	2c0a0ffd613a383b
+3	1536	6749960052453553	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1536	1725	6749960054328532	Thread_Practice.exe	2c0a0ffd613a383b
+4	1355	6749960234659648	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1356	1545	6749960236530592	Thread_Practice.exe	2c0a0ffd613a383b
+5	1462	6749960470259916	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1462	1651	6749960472104988	Thread_Practice.exe	2c0a0ffd613a383b
+4	1499	6749960603712188	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1499	1681	6749960605498124	Thread_Practice.exe	2c0a0ffd613a383b
+3	1412	6749960658517516	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1412	1596	6749960660330393	Thread_Practice.exe	2c0a0ffd613a383b
+3	1277	6749960808636251	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1277	1461	6749960810447243	Thread_Practice.exe	2c0a0ffd613a383b
+6	3574	6751901307843987	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+3574	4116	6751901313244268	Thread_Practice.exe	2c0a0ffd613a383b
+6	1403	6751901731346217	CMakeFiles/Thread_Practice.dir/main.cpp.obj	bb1968066eeb1ee7
+1403	1593	6751901733231028	Thread_Practice.exe	2c0a0ffd613a383b
