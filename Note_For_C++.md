@@ -673,8 +673,10 @@ string管理char*所分配的内存，不用担心赋值越界和取值越界，
 #### 3.2.1 string构造函数
 
 构造函数原型：
-    - `string()`     //创建一个空的字符串 例如：string str;
-
+    - `string()`                     //创建一个空的字符串 例如：string str;
+    - `string(const char* s)`        //使用字符串初始化
+    - `string(const string& str)`   //使用一个string对象初始化一个string对象
+    - `string(int n, char c)`       //使用n个字符c初始化
 
 
 
