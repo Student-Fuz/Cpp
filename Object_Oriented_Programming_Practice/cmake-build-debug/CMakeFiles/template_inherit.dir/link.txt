@@ -1,0 +1,3 @@
+"D:\IDE\Clion\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\template_inherit.dir/objects.a
+D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\template_inherit.dir/objects.a @CMakeFiles\template_inherit.dir\objects1.rsp
+D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\template_inherit.dir/objects.a -Wl,--no-whole-archive -o template_inherit.exe -Wl,--out-implib,libtemplate_inherit.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\template_inherit.dir\linklibs.rsp

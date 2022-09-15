@@ -1,4 +1,4 @@
-# Install script for directory: D:/Code&Algorithm/C++/Object_Oriented_Programming_Practice
+# Install script for directory: D:/Code&Algorithm/Cpp/Object_Oriented_Programming_Practice
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -45,5 +45,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "D:/Code&Algorithm/C++/Object_Oriented_Programming_Practice/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "D:/Code&Algorithm/Cpp/Object_Oriented_Programming_Practice/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,0 +1,3 @@
+"D:\IDE\Clion\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\overload.dir/objects.a
+D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\overload.dir/objects.a @CMakeFiles\overload.dir\objects1.rsp
+D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\overload.dir/objects.a -Wl,--no-whole-archive -o overload.exe -Wl,--out-implib,liboverload.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\overload.dir\linklibs.rsp

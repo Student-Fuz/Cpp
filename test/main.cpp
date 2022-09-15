@@ -8,7 +8,7 @@ using namespace std;
 int main(){
 
     string str0 = "1";
-    string str1 = "12fsfsfsfsfsfsfsfsfsfsf";
+    string str1 = "12";
 
     cout << sizeof(str0) << endl;
     cout << sizeof(str1) << endl;
