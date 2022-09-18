@@ -678,12 +678,59 @@ string管理char*所分配的内存，不用担心赋值越界和取值越界，
     - `string(const string& str)`   //使用一个string对象初始化另一个string对象
     - `string(int n, char c)`       //使用n个字符c初始化
 
-#### 3.2.2 拼接
+#### 3.2.2 string拼接
 
 功能描述：
-    - 实现在字符串末尾凭借字符串
+- 实现在字符串末尾凭借字符串
 
 几种方式：
-    - `string& operator(const char* c);` //重载+=操作符
-    - `string& operator(const char c);` //重载+=操作符
-    - `string& operator(const char* c);` //重载+=操作符 
+- `string& operator+=(const char* c);` //重载+=操作符
+- `string& operator+=(const char c);` //重载+=操作符
+- `string& operator+=(const string& str);` //重载+=操作符 
+- `string& append(const char* s);` //把字符串s连接到当前字符串结尾
+- `string& append(const char* c， int n);` //把字符串s的前n个连接到当前字符结尾
+- `string& append(const string& str);` //相当于operator+=(const string& str);
+- `string& append(const string& str, int pos, int n);`//把字符串s从pos开始的前n个连接到当前字符结尾
+
+
+#### 3.2.3 string拼接
+
+功能描述：
+- 查找：查找指定字符串是否存在
+- 替换：在指定的位置替换字符串
+
+函数原型：
+查找：
+- `int find(const string &str, int pos = 0) const;`     //查找str第一次出现的位置，从pos开始查找
+- `int find(const char* s, int pos = 0) const;`         //查找s第一次出现的位置，从pos开始查找
+- `int find(const char* s, int pos = 0,int n) const;`   //从pos开始查找的前n个字符s第一次的出现位置
+- `int rfind(const string &str, int pos = 0) const;`    //查找str最后一次出现的位置，从pos开始查找
+- `int rfind(const char* s, int pos = 0) const;`        //查找s最后一次出现的位置，从pos开始查找
+- `int rfind(const char* s, int pos = 0,int n) const;`  //从pos开始查找的前n个字符s最后一次的出现位置
+
+替换：
+- `string& replace(int pos, int n, const string& str);`   //替换从pos开始n个字符为字符串str
+- `string& replace(int pos, int n, const char* s);`   //替换从pos开始n个字符为字符串s
+
+#### 3.2.4 string字符串比较
+
+功能描述：
+- 字符串之间的比较
+
+比较方式：
+- = 返回 0
+- > 返回 1
+- < 返回-1
+
+函数原型：
+- `int compare(const string &str) const;`   //与字符串str比较
+- `int compare(const char* s) const;`   //与字符串s比较
+
+#### 3.2.4 string字符串比较
+
+string中单个字符的存取方式有两种
+
+- `char& operator[](int n)`     //通过[]方式取字符
+- `char& at(int n)`             //通过at方法取字符
+
+
