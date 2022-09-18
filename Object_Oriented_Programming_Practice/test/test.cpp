@@ -8,8 +8,16 @@
 using namespace std;
 
 int main(){
-    int myint;
-    myint = (myint++)++;
-    cout << myint << endl;
+//    int num_a = 10;
+//    int * a = &num_a;
+//    *(a+1) = 20;
+//    cout << a << endl;
+//    cout << *(a+1) << endl;
+
+    int num_a[2] = {10,10};
+    int * a = num_a;
+    *(a+1) = 20;
+    cout << a << endl;
+    cout << *(a+1) << endl;
     return 0;
 }
