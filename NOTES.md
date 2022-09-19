@@ -14,7 +14,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
 不同区域存放的数据，赋予不同的生命周期，给我们更大的灵活编程
 
-示例[程序](.\Object_Oriented_Programming_Practice\Memory\memory.cpp)
+示例[程序](.\OOP\Memory\memory.cpp)
 
 #### 1.1 程序运行前
 
@@ -72,7 +72,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
         }
 ```
 
-示例[程序](.\Object_Oriented_Programming_Practice\reference\reference.cpp)
+示例[程序](.\OOP\reference\reference.cpp)
 
 
 ### 函数高级
@@ -87,13 +87,13 @@ C++程序在执行时，将内存大方向划分为**4个区域**
  - 引用作为重载的条件： 区分常量引用和普通引用的应用
  - 函数重载碰到默认参数：需要注意避免语义二义性
 
-示例[程序](.\Object_Oriented_Programming_Practice\overload\overload.cpp)
+示例[程序](.\OOP\overload\overload.cpp)
 
 ## 面对对象编程
 
 ### 面对对象基础
 
-语法：基本实现[例程](.\Object_Oriented_Programming_Practice\main.cpp)
+语法：基本实现[例程](.\OOP\main.cpp)
 
 ### 访问权限
 
@@ -102,7 +102,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
  - protected     类内可访问 类外不可访问 儿子可访问
  - private       类内可访问 类外不可访问 儿子不可访问
 
-访问权限[例程](.\Object_Oriented_Programming_Practice\access_authority\Person.cpp)
+访问权限[例程](.\OOP\access_authority\Person.cpp)
 
 ### this的应用
 
@@ -320,7 +320,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
  - 运算符++重载
 
-示例[程序](.\Object_Oriented_Programming_Practice\overload\Operator_plusplus_overload.cpp)
+示例[程序](.\OOP\overload\Operator_plusplus_overload.cpp)
 
  **注意：C++只能前置链式调用；不能后置链式调用**
 
@@ -328,7 +328,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
  子类继承父类代码，减少重复代码
 
- 基本语法：示例[程序](.\Object_Oriented_Programming_Practice\inherit\inherit.cpp)
+ 基本语法：示例[程序](.\OOP\inherit\inherit.cpp)
 
 #### 继承方式
 
@@ -543,7 +543,7 @@ new没有这样直观的配套设施来扩充内存。
  - 如果不指定，编译器无法给子类分配内存
  - 如果向灵活指出父类中T的类型，子类也需变成为类模板
 
- 示例[程序](.\Object_Oriented_Programming_Practice\template\class_template\template_inherit.cpp)
+ 示例[程序](.\OOP\template\class_template\template_inherit.cpp)
 
  ##### 2.6 类模板成员函数的类外实现
 
@@ -657,7 +657,7 @@ void Person<T1,T2>::showPerson(T1 name, T2 age){
     vector<vector<type>> v_nest;
 ```
 
-### 2.2 string 
+### 2.3 string 
 
 本质：
  - string是C++风格的字符串，而string本质上是一个类
@@ -670,7 +670,7 @@ string类内封装了很多成员方法
 例如：查找find，拷贝copy，删除delete，替换replace，插入insert
 string管理char*所分配的内存，不用担心赋值越界和取值越界，由类内部进行负责
 
-#### 3.2.1 string构造函数
+#### 2.3.1 string构造函数
 
 构造函数原型：
     - `string();`                   //创建一个空的字符串 例如：string str;
@@ -678,59 +678,154 @@ string管理char*所分配的内存，不用担心赋值越界和取值越界，
     - `string(const string& str)`   //使用一个string对象初始化另一个string对象
     - `string(int n, char c)`       //使用n个字符c初始化
 
-#### 3.2.2 string拼接
+#### 2.3.2 string拼接
 
 功能描述：
 - 实现在字符串末尾凭借字符串
 
 几种方式：
-- `string& operator+=(const char* c);` //重载+=操作符
-- `string& operator+=(const char c);` //重载+=操作符
-- `string& operator+=(const string& str);` //重载+=操作符 
-- `string& append(const char* s);` //把字符串s连接到当前字符串结尾
-- `string& append(const char* c， int n);` //把字符串s的前n个连接到当前字符结尾
-- `string& append(const string& str);` //相当于operator+=(const string& str);
-- `string& append(const string& str, int pos, int n);`//把字符串s从pos开始的前n个连接到当前字符结尾
+ - `string& operator+=(const char* c);` //重载+=操作符
+ - `string& operator+=(const char c);` //重载+=操作符
+ - `string& operator+=(const string& str);` //重载+=操作符 
+ - `string& append(const char* s);` //把字符串s连接到当前字符串结尾
+ - `string& append(const char* c， int n);` //把字符串s的前n个连接到当前字符结尾
+ - `string& append(const string& str);` //相当于operator+=(const string& str);
+ - `string& append(const string& str, int pos, int n);`//把字符串s从pos开始的前n个连接到当前字符结尾
 
 
-#### 3.2.3 string拼接
+#### 2.3.3 string拼接
 
 功能描述：
-- 查找：查找指定字符串是否存在
-- 替换：在指定的位置替换字符串
+ - 查找：查找指定字符串是否存在
+ - 替换：在指定的位置替换字符串
 
 函数原型：
 查找：
-- `int find(const string &str, int pos = 0) const;`     //查找str第一次出现的位置，从pos开始查找
-- `int find(const char* s, int pos = 0) const;`         //查找s第一次出现的位置，从pos开始查找
-- `int find(const char* s, int pos = 0,int n) const;`   //从pos开始查找的前n个字符s第一次的出现位置
-- `int rfind(const string &str, int pos = 0) const;`    //查找str最后一次出现的位置，从pos开始查找
-- `int rfind(const char* s, int pos = 0) const;`        //查找s最后一次出现的位置，从pos开始查找
-- `int rfind(const char* s, int pos = 0,int n) const;`  //从pos开始查找的前n个字符s最后一次的出现位置
+ - `int find(const string &str, int pos = 0) const;`     //查找str第一次出现的位置，从pos开始查找
+ - `int find(const char* s, int pos = 0) const;`         //查找s第一次出现的位置，从pos开始查找
+ - `int find(const char* s, int pos = 0,int n) const;`   //从pos开始查找的前n个字符s第一次的出现位置
+ - `int rfind(const string &str, int pos = 0) const;`    //查找str最后一次出现的位置，从pos开始查找
+ - `int rfind(const char* s, int pos = 0) const;`        //查找s最后一次出现的位置，从pos开始查找
+ - `int rfind(const char* s, int pos = 0,int n) const;`  //从pos开始查找的前n个字符s最后一次的出现位置
 
 替换：
-- `string& replace(int pos, int n, const string& str);`   //替换从pos开始n个字符为字符串str
-- `string& replace(int pos, int n, const char* s);`   //替换从pos开始n个字符为字符串s
+ - `string& replace(int pos, int n, const string& str);`   //替换从pos开始n个字符为字符串str
+ - `string& replace(int pos, int n, const char* s);`   //替换从pos开始n个字符为字符串s
 
-#### 3.2.4 string字符串比较
+#### 2.3.4 string字符串比较
 
 功能描述：
 - 字符串之间的比较
 
 比较方式：
-- = 返回 0
-- > 返回 1
-- < 返回-1
+ - = 返回 0
+ - > 返回 1
+ - < 返回-1
 
 函数原型：
-- `int compare(const string &str) const;`   //与字符串str比较
-- `int compare(const char* s) const;`   //与字符串s比较
+ - `int compare(const string &str) const;`   //与字符串str比较
+ - `int compare(const char* s) const;`   //与字符串s比较
 
-#### 3.2.4 string字符串比较
+#### 2.3.5 string字符/字符串存取
 
 string中单个字符的存取方式有两种
 
-- `char& operator[](int n)`     //通过[]方式取字符
-- `char& at(int n)`             //通过at方法取字符
+ - `char& operator[](int n)`     //通过[]方式取字符
+ - `char& at(int n)`             //通过at方法取字符
+
+string中子字符串的存取方式一种
+ 
+函数原型：
+ - `string substr(int pos = 0, int n = npos)const;`  //返回由pos开始的n个字符组成的字符串
+
+#### 2.3.6 string插入和删除
+
+功能描述：
+ - 对string字符串进行插入和删除字符操作
+
+函数原型：
+ - `string& insert(int pos, const char* s);`      //在指定位置插入字符串s
+ - `string& insert(int pos, const string& str);`  //在指定位置插入字符串str
+ - `string& insert(int pos, int n, char c);`      //在指定位置插入n个字符c
+ - `string& erase(int pos, int n = npos);`        //删除从pos开始的n个字符
+
+### 2.4 deque容器
+
+功能：
+ - 双端数组，可以对头端进行插入删除操作
+
+deque与vector的区别：
+ - vector对于头部的插入删除效率低，数据量越大，效率越低
+ - deque相对而言，对于头部的插入删除速度比vector快
+ - vector访问元素时的速度回避deque快，这和两者的内部实现有关 
+
+deque内部工作原理：
+
+deque内部有一个**中控器**，维护每段缓冲区的内容，缓冲区中存放真实数据
+中控器维护的时每个缓冲区的地址，使得使用deque时像是一片连续的内存空间
+
+![img.png](pic/img.png)
+
+##### 2.4.1 deque构造函数
+
+功能描述：
+- deque容器构造
+
+函数原型：
+ - `dque<T>` deqT;          //默认构造形式
+ - `deque(beg,end)`;          //构造函数将[beg,end]区间中的元素拷贝给自身
+ - `deque(n,elem)`;           //构造函数将n个elem拷贝给本身
+ - `deque(const deuqe &deq)`  //拷贝构造函数
+
+##### 2.4.2 deque赋值操作
+
+功能描述：
+ - 给deque容器进行赋值
+
+函数原型：
+ - `deque& operator(const deque &deq)`  //重载符号操作符
+ - `assign(beg,end);`                   //将[beg,end]区间中的数据拷贝赋值给本身
+ - `assign(n, elem)`                    //将n个elem拷贝赋值给本身
+
+##### 2.4.3 deque容器大小操作
+
+功能描述：
+ - 对deque容器的大小进行操作
+
+函数原型：
+ - `deque.empty();`             //判断容器是否为空
+ - `deque.size();`              //返回容器中元素的个数
+ - `deque.resize(num);`         //重新指定容器的长度为num，若容器变长，则以默认值填充新位置
+                                //如果函数变短，则末尾超出容器长度的元素被删除
+ - `deque.resize(num,elem);`    //重新指定容器的长度num，若容器变长，则以elem值填充新位置，
+                                //如果函数变短，则末尾超出容器长度的元素被删除
+
+##### 2.4.4 deque容器插入和删除
+
+功能描述：
+ - 向deque容器中插入和删除数据
+
+函数原型：
+两端插入操作：
+  - `push_back(elem);`         //在容器尾部添加一个数据
+  - `push_front(elem);`        //在容器头部添加一个数据
+  - `pop_back(elem);`          //在容器尾部添加一个数据
+  - `pop_front(elem);`         //删除容器第一个数据
+
+指定位置操作：
+ - `insert(pos,elem);`              //在pos位置插入一个elem元素的拷贝，返回新数据的位置
+ - `insert(pos, n, elem);`          //在pos位置插入n个elem元素的拷贝，无返回值
+ - `inser(pos,beg,end);`            //在pos位置插入[beg,end]区间的数据，无返回值
+ - `clear();`                       //清空容器的所有数据
+ - `erase(beg,end);`                //删除[beg,end]区间的数据，返回下一个数据的位置
+ - `erase(pos)`                     //删除pos位置的数据，返回下一个数据的位置
+
+
+
+
+
+
+
+
 
 

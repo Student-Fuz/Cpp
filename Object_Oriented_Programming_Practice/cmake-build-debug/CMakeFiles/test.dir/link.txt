@@ -1,3 +1,0 @@
-"D:\IDE\Clion\CLion 2021.3.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\test.dir/objects.a
-D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\ar.exe qc CMakeFiles\test.dir/objects.a @CMakeFiles\test.dir\objects1.rsp
-D:\IDE\Clion\CLION2~1.4\bin\mingw\bin\G__~1.EXE -g -Wl,--whole-archive CMakeFiles\test.dir/objects.a -Wl,--no-whole-archive -o test.exe -Wl,--out-implib,libtest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\test.dir\linklibs.rsp
