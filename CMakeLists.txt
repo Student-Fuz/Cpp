@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.21)
-project(OOP)
+﻿cmake_minimum_required(VERSION 3.21)
+project(CPP)
 
 set(CMAKE_CXX_STANDARD 14)
 
@@ -56,3 +56,9 @@ add_executable(stl_vector STL/vector/vector.cpp)
 
 #STL----nest_vector
 add_executable(stl_vector_nest STL/vector/vector_nest.cpp)
+
+#STL----map
+add_executable(stl_map STL/map/map.cpp)
+
+#STL----map_custom_sort
+add_executable(stl_map_custom_sort STL/map/map_custom_sort.cpp)

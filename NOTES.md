@@ -14,7 +14,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
 不同区域存放的数据，赋予不同的生命周期，给我们更大的灵活编程
 
-示例[程序](.\OOP\Memory\memory.cpp)
+示例[程序](OOP\Memory\memory.cpp)
 
 #### 1.1 程序运行前
 
@@ -72,7 +72,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
         }
 ```
 
-示例[程序](.\OOP\reference\reference.cpp)
+示例[程序](OOP\reference\reference.cpp)
 
 
 ### 函数高级
@@ -87,13 +87,13 @@ C++程序在执行时，将内存大方向划分为**4个区域**
  - 引用作为重载的条件： 区分常量引用和普通引用的应用
  - 函数重载碰到默认参数：需要注意避免语义二义性
 
-示例[程序](.\OOP\overload\overload.cpp)
+示例[程序](OOP\overload\overload.cpp)
 
 ## 面对对象编程
 
 ### 面对对象基础
 
-语法：基本实现[例程](.\OOP\main.cpp)
+语法：基本实现[例程](OOP\main.cpp)
 
 ### 访问权限
 
@@ -102,7 +102,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
  - protected     类内可访问 类外不可访问 儿子可访问
  - private       类内可访问 类外不可访问 儿子不可访问
 
-访问权限[例程](.\OOP\access_authority\Person.cpp)
+访问权限[例程](OOP\access_authority\Person.cpp)
 
 ### this的应用
 
@@ -320,7 +320,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
  - 运算符++重载
 
-示例[程序](.\OOP\overload\Operator_plusplus_overload.cpp)
+示例[程序](OOP\overload\Operator_plusplus_overload.cpp)
 
  **注意：C++只能前置链式调用；不能后置链式调用**
 
@@ -328,7 +328,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
  子类继承父类代码，减少重复代码
 
- 基本语法：示例[程序](.\OOP\inherit\inherit.cpp)
+ 基本语法：示例[程序](OOP\inherit\inherit.cpp)
 
 #### 继承方式
 
@@ -543,7 +543,7 @@ new没有这样直观的配套设施来扩充内存。
  - 如果不指定，编译器无法给子类分配内存
  - 如果向灵活指出父类中T的类型，子类也需变成为类模板
 
- 示例[程序](.\OOP\template\class_template\template_inherit.cpp)
+ 示例[程序](OOP\template\class_template\template_inherit.cpp)
 
  ##### 2.6 类模板成员函数的类外实现
 
@@ -1006,5 +1006,118 @@ List有一个重要的性质，插入操作和删除操作都不会造成院有l
 set和multiset的区别：
  - set不允许容器中有重复的元素
  - multiset允许容器中有重复的元素
+
+##### 2.8.2 set构造和赋值
+
+功能描述：创建set容器以及赋值
+
+构造：
+ - `set<T> st;`            //默认构造函数；
+ - `set(const set &st);`   //拷贝构造函数
+
+赋值：
+ - `set& operator=(const set &st);`    //重载等号操作符
+
+##### 2.8.3 set大小和交换
+
+功能描述：
+ - 统计set容器的大小以及交换set容器
+
+函数原型：
+ - `size();`       //返回容器中元素的数目
+ - `empty();`      //判断容器是否为空
+ - `swap(st);`     //交换两个集合容器
+
+##### 2.8.4 set插入与删除
+功能描述：
+ - set容器进行数据和删除数据
+
+函数原型：
+ - `insert(elem);`        //在容器中插入元素
+ - `clear();`             //清楚所有元素
+ - `erase(pos)`           //删除pos迭代器所指的元素，返回下一个元素的迭代器
+ - `erase(beg,end);`      //删除区间[beg,end]的所有元素，返回下一个元素的迭代器
+ - `erase();`             //删除容器中值为elem的元素
+
+##### 2.8.5 set查找和统计
+
+功能描述：
+ - 对set容器进行查找数据以及统计数据
+
+函数原型：
+ - `find(key);`           //查找key是否存在，返回该键的元素的迭代器；若不存在，返回set.end();
+ - `count(key);`          //统计key的元素个数
+
+###### 2.9 map/multimap容器
+
+###### 2.9.1 map基本概念
+简介：
+ - map中所有元素都是pair
+ - pair中第一个元素为key（键值），起到索引的作用，第二个元素为value（实值）
+ - 所有元素都会根据元素的键值自动排序
+
+本质：
+ - map/multimap属于关联式容器，底层结构是用二叉树实现。
+
+优点：
+ - 可以根据key值快速找到value值
+
+map和multimap的区别：
+ - map不允许容器中有重复key值元素
+ - multimap允许容器中有重复key值元素
+
+###### 2.9.2 map构造和赋值
+
+功能描述：
+ - 对map容器进行构造和赋值操作
+
+函数原型：
+构造：
+ - `map<T1,T2> mp;`        //map默认构造函数；
+ - `map(const map &mp);`   //拷贝构造函数
+
+赋值：
+ - `map& operator=(const map &mp);`      //重载等号操作符
+
+###### 2.9.3 map大小和交换
+
+功能描述：
+ - 统计map容器大小以及交换map容器
+
+函数原型：
+ - `size();`           //返回容器中元素的数目
+ - `empty();`          //判断容器是否为空
+ - `swap(st);`         //交换两个集合容器
+
+###### 2.9.4 map插入与删除
+功能描述：
+ - map容器进行插入数据和删除数据
+
+函数原型：
+
+ - `insert(elem);`         //在容器中插入元素
+ - `clear();`              //清楚所有元素
+ - `erase(pos);`           //删除pos迭代器所指的元素，返回下一个元素的迭代器
+ - `erase(beg,end);`       //删除区间[beg,end]的所有元素，返回下一个元素的迭代器
+ - `erase(key);`           //删除容器中值为key的元素
+
+###### 2.9.5 map查找和统计
+
+功能描述：
+ - 对map容器进行查找数据以及统计数据
+
+函数原型：
+ - `find(key)`        //查找key是否存在，若存在，返回该键的元素的迭代器，若不存在，返回map.end();
+ - `cout(key)`        //统计key的元素的个数
+
+###### 2.9.6 map容器排序
+
+默认排序方式：
+ - map容器默认的排序规则为：按照key值进行 从小到大排序，
+
+自定义排序方式：
+ - 利用仿函数，可以改变排序规则
+
+[例程](STL/map/map_custom_sort.cpp)
 
 
