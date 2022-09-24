@@ -36,6 +36,9 @@ add_executable(oop_test OOP/test/test.cpp OOP/test/test.h)
 #继承
 add_executable(oop_inherit OOP/inherit/inherit.cpp)
 
+#多态
+add_executable(oop_polymorphism OOP/polymorphism/polymorphism.cpp)
+
 #继承访问权限
 add_executable(oop_inherit_acc_auth OOP/inherit/inherit_acc_auth.cpp)
 

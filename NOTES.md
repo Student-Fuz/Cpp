@@ -74,6 +74,32 @@ C++程序在执行时，将内存大方向划分为**4个区域**
 
 示例[程序](OOP\reference\reference.cpp)
 
+#### 引用的本质
+
+本质：引用的本质在C++内部实现是一个常量指针
+
+讲解示例：
+```cpp
+//编译器发现是引用，转换为int* const ref = &a;
+void func(int & ref){
+    ref = 100; //ref是引用，转换为*ref = 100;
+}
+int main(){
+    int a = 10;
+    
+    //自动转换为 int* const ref = &a;指针常量是指针指向不可更改，这也是为什么引用不能更改引用对象
+    int & ref = a;
+    ref = 20; //内部发现ref是应用，自动帮我们转换为： *ref = 20;
+    
+    cout << "a :" << a << endl;
+    cout << "ref: " << ref << endl;
+    
+    func(a);
+    
+    return 0;
+}
+
+```
 
 ### 函数高级
 
@@ -203,7 +229,7 @@ C++程序在执行时，将内存大方向划分为**4个区域**
     例：
     ```cpp
         Person(参数){
-            初始化；
+            初始化;
         }
     ```
 
@@ -353,22 +379,80 @@ C++程序在执行时，将内存大方向划分为**4个区域**
  - struct默认权限为公共
  - **class默认权限为私有**
 
-## new/delete与malloc/free的区别
+### 多态
 
-1. new/delete是C++操作符，malloc/free是库函数
-2. new分配内存按照数据类型进行分配，malloc分配内存按照大小分配
-3. new在动态分配内存的时候可以初始化对象，调用其构造函数，delete在释放内存时 调用对象的析构函数。
-而malloc只分配一段给定大小的内存，并返回该内存首地址指针，如果失败，返回NULL。
-4. new/delete可以重载，而malloc不行
-5. new返回的是指定对象的指针，而malloc返回的是void*，因此malloc的返回值一般都需要进行类型转化
-6. 对于数据C++定义new[]专门进行动态数组分配，用delete[]进行销毁。new[]会一次分配内存，然后多次调用构造函数；delete[]会先多次调用析构函数，然后一次性释放
-new如果分配失败了会抛出bad_malloc的异常，而malloc失败了会返回NULL。因此对于new，正确的姿势是采用try…catch语法，而malloc则应该判断指针的返回值。为了兼容很多c程序员的习惯，C++也可以采用new nothrow的方法禁止抛出异常而返回NULL；
-malloc能够直观地重新分配内存使用realloc函数进行内存重新分配实现内存的扩充
-new没有这样直观的配套设施来扩充内存。
+#### 多态的基本概念
 
-## 内存泄露
+**多态是C++面对对象的三大特性之一**
 
+多态分为两类
+ - 静态多态：函数重载和运算符重载属于静态多态，复用函数名
+ - 动态多态：派生类和虚函数实现运行时多态
 
+静态多态和动态多态的区别：
+ - 静态多态的函数地址早绑定 -编译阶段确定函数地址
+ - 动态多态的函数地址完绑定 -运行阶段确定函数地址
+
+下面通过案例进行讲解多态：
+
+```cpp
+class Animal{
+public:
+    //speak函数就是虚函数
+    //虚函数前面加上virtual关键字，变成虚函数，那么编译器在编译的时候就不能确定函数调用了
+    virtual void speak(){
+        cout << "动物在说话" << endl;
+    }
+};
+
+class Cat : public Animal{
+public:
+    void speak(){
+        cout << "小猫在说话：" << endl;
+    }
+};
+
+class Dog : public Animal{
+public:
+    void speak(){
+        cout << "小狗在说话" << endl;
+    }
+};
+
+void DoSpeak(Animal & animal){
+    animal.speak();
+}
+
+//多态满足条件
+//1、有继承关系
+//2、子类重写父类中的虚函数
+//多态使用条件
+//父类指针或引用 指向子类对象
+
+void test01(){
+    Cat cat;
+    DoSpeak(cat);
+
+    Dog dog;
+    DoSpeak(dog);
+}
+
+int main(){
+    test01();
+
+    system("pause");
+
+    return 0 ;
+}
+```
+总结：
+ 
+多态满足条件
+ - 有继承关系
+ - 子类重写父类中的虚函数
+
+多态使用条件
+ - 父类指针或引用 指向子类对象
 
 ## 泛型编程
 
