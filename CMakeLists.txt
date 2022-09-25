@@ -10,10 +10,10 @@ add_executable(oop_deepshallow_copy OOP/deepshallow_copy/Teacher.cpp)
 add_executable(oop_shallow_copy OOP/deepshallow_copy/Person.cpp)
 
 #内存模型
-add_executable(oop_memory OOP/memory/memory.cpp)
+add_executable(oop_memory Generic_Program/memory/memory.cpp)
 
 #引用
-add_executable(oop_reference OOP/reference/reference.cpp)
+add_executable(oop_reference Reference/reference/reference.cpp)
 
 #重载
 add_executable(oop_overload OOP/overload/overload.cpp OOP/overload/Operator_overload.cpp)
@@ -36,26 +36,29 @@ add_executable(oop_test OOP/test/test.cpp OOP/test/test.h)
 #继承
 add_executable(oop_inherit OOP/inherit/inherit.cpp)
 
-#多态
-add_executable(oop_polymorphism OOP/polymorphism/polymorphism.cpp)
-
 #继承访问权限
 add_executable(oop_inherit_acc_auth OOP/inherit/inherit_acc_auth.cpp)
 
+#继承----继承中的构造函数与析构函数
+add_executable(oop_inherit_destructor_constructor OOP/inherit/inherit_destructor_constructor.cpp)
+
+#多态
+add_executable(oop_polymorphism OOP/polymorphism/polymorphism.cpp)
+
 #模板----函数模板
-add_executable(oop_template_func OOP/template/func_template.cpp)
+add_executable(oop_template_func Generic_Program/template/func_template.cpp)
 
 #模板----类模板
-add_executable(oop_template_class OOP/template/class_template/class_template.cpp)
+add_executable(oop_template_class Generic_Program/template/class_template/class_template.cpp)
 
 #模板----模板的局限性
-add_executable(oop_template_limit OOP/template/template_limit.cpp)
+add_executable(oop_template_limit Generic_Program/template/template_limit.cpp)
 
 #模板----模板对象做函数参数
-add_executable(oop_template_obj_as_param OOP/template/class_template/template_obj_as_param.cpp)
+add_executable(oop_template_obj_as_param Generic_Program/template/class_template/template_obj_as_param.cpp)
 
 #模板----模板类的继承
-add_executable(oop_template_inherit OOP/template/class_template/template_inherit.cpp)
+add_executable(oop_template_inherit Generic_Program/template/class_template/template_inherit.cpp)
 
 #STL----vector
 add_executable(stl_vector STL/vector/vector.cpp)

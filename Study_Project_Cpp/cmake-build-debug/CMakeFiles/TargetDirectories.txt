@@ -1,6 +1,0 @@
-D:/Clion/Study_Project_Cpp/cmake-build-debug/CMakeFiles/Study_Project_Cpp.dir
-D:/Clion/Study_Project_Cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Clion/Study_Project_Cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-D:/Clion/Study_Project_Cpp/cmake-build-debug/generic/lib/CMakeFiles/generic.dir
-D:/Clion/Study_Project_Cpp/cmake-build-debug/generic/lib/CMakeFiles/edit_cache.dir
-D:/Clion/Study_Project_Cpp/cmake-build-debug/generic/lib/CMakeFiles/rebuild_cache.dir

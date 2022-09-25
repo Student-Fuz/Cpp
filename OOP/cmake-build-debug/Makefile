@@ -259,7 +259,7 @@ operator_plusplus_overload/fast:
 .PHONY : operator_plusplus_overload/fast
 
 #=============================================================================
-# Target rules for targets named test
+# Target rules for targets named Draft
 
 # Build rule for target.
 test: cmake_check_build_system
