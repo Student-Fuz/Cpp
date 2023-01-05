@@ -2,7 +2,7 @@
 
 ### 面对对象基础
 
-语法：基本实现[例程](OOP\main.cpp)
+语法：基本实现[例程](main.cpp)
 
 ### 访问权限
 
@@ -11,7 +11,7 @@
 - protected     类内可访问 类外不可访问 儿子可访问
 - private       类内可访问 类外不可访问 儿子不可访问
 
-访问权限[例程](OOP\access_authority\Person.cpp)
+访问权限[例程](access_authority\Person.cpp)
 
 ### this的应用
 
@@ -183,7 +183,7 @@ this是当前对象的指针
 - 引用作为重载的条件： 区分常量引用和普通引用的应用
 - 函数重载碰到默认参数：需要注意避免语义二义性
 
-示例[程序](OOP\overload\overload.cpp)
+示例[程序](overload\overload.cpp)
 
 ### 运算符重载
 
@@ -243,7 +243,7 @@ this是当前对象的指针
 
 - 运算符++重载
 
-示例[程序](OOP\overload\Operator_plusplus_overload.cpp)
+示例[程序](overload\Operator_plusplus_overload.cpp)
 
 **注意：C++只能前置链式调用；不能后置链式调用**
 
@@ -251,7 +251,7 @@ this是当前对象的指针
 
 子类继承父类代码，减少重复代码
 
-基本语法：示例[程序](OOP\inherit\inherit.cpp)
+基本语法：示例[程序](inherit\inherit.cpp)
 
 #### 继承方式
 

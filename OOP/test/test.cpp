@@ -1,35 +1,43 @@
-//
-// Created by Fu_zh on 2022/8/28.
-//
-
-#include "test.h"
-#include <iostream>
-#include <cstring>
-
+#include<iostream>
 using namespace std;
 
-int main(){
+class A{
+public:
+    A(){ cout << "调用A的默认构造函数" << endl; }
+    ~A(){ cout << "调用A的析构函数" << endl; }
+    void show(){
+        cout << "A 的show函数" << endl;
+    }
+};
 
-    int * a;
-    a = new int;
+class B:public A{
+public:
+    B(){ cout << "调用B的默认构造函数" << endl; }
+    ~B(){ cout << "调用B的析构函数" << endl; }
+    void show(){
+        cout << "B 的show函数" << endl;
+    }
+    int value = 1;
+};
 
-    cout << sizeof(*a) << endl;
-
-    int * b;
-
-    b = (int*)malloc(10000);
-
-    cout << sizeof(*b) << endl;
+int main()
+{
 
 
-    a = new int[10];
+	//实验一
+//	cout << "A对象a::" << endl;
+//	A *a = new A();
+//	delete a;
+//	cout << endl << endl;
+//	cout << "B对象b::" << endl;
+//	B *b = new B();
+//	delete b;
 
-    string s = "ab";
-    char str[] = "ab";
+    //实验二
+    A *a1 = new B();
+    a1->show();
+    delete a1;
 
-    cout << sizeof(s) << endl;
-    cout << s.length() << endl;
-    cout << strlen(str) << endl;
 
     return 0;
 }

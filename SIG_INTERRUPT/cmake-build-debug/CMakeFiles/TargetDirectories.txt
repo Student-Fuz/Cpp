@@ -1,3 +1,0 @@
-D:/Code&Algorithm/C++/SIG_INTERRUPT/cmake-build-debug/CMakeFiles/SIG_INTERRUPT.dir
-D:/Code&Algorithm/C++/SIG_INTERRUPT/cmake-build-debug/CMakeFiles/edit_cache.dir
-D:/Code&Algorithm/C++/SIG_INTERRUPT/cmake-build-debug/CMakeFiles/rebuild_cache.dir

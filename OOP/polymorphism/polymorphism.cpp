@@ -14,10 +14,6 @@ public:
 //        cout << "动物在说话" << endl;
 //    }
 
-      //非法，构造函数不能为虚函数
-    virtual Animal(){
-
-    }
 
     virtual void speak(){
         cout << "动物在说话" << endl;
